@@ -1,0 +1,36 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="kadyshev.dmitry.coursesapp.fragments.OnboardingFragment"
+        android:label="OnboardingFragment">
+        <action
+            android:id="@+id/action_onboardingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="kadyshev.dmitry.coursesapp.fragments.FavoriteFragment"
+        android:label="FavoriteFragment">
+    </fragment>
+
+    <action
+        android:id="@+id/action_homeFragment_to_favoriteFragment"
+        app:destination="@id/favoriteFragment" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="kadyshev.dmitry.coursesapp.fragments.LoginFragment" />
+    <action
+        android:id="@+id/action_loginFragment_to_mainFragment"
+        app:destination="@id/homeFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="kadyshev.dmitry.coursesapp.fragments.HomeFragment"
+        android:label="homeFragment"/>
+
+</navigation>
